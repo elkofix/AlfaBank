@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vb" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.HelloController">
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="valueColumn" text="Value" />
+            <TableColumn fx:id="descColum" text="Description" />
+            <TableColumn fx:id="typeColum" text="Type" />
+            <TableColumn fx:id="dateColum" text="Date" />
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT">
+        <Button fx:id="addButton" onAction="#onAddTransaction" text="Add" />
+        <Button fx:id="incomeButton" disable="false" onAction="#onShowIncome" text="Ingresos" />
+        <Button fx:id="outcomeButton" disable="false" onAction="#onShowOutcome" text="Gastos" />
+        <Button fx:id="completeButton" disable="false" onAction="#onShowCombined" text="Combinada" />
+      <Label text="Balance: 0" fx:id="balanceLb">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Label>
+    </HBox>
+</VBox>

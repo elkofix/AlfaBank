@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.example.demo.model.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="418.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.AddTransactionController">
+
+    <VBox layoutX="153.0" layoutY="53.0" spacing="10">
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
+         <children>
+            <Label textFill="#09ae40" fx:id="labelAlert"/>
+         </children>
+      </HBox>
+        <Label text="Valor:" />
+        <TextField fx:id="valueTransactionTF" />
+
+        <Label text="Descripción:" />
+        <TextField fx:id="descTransactionTF" />
+        <Label text="Tipo:" />
+        <ComboBox fx:id="typeTransactionCB">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <Type fx:value="INCOME" />
+                    <Type fx:value="OUTCOME" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label text="Fecha:" />
+        <DatePicker fx:id="dateTransactionDP" />
+      <HBox alignment="BASELINE_CENTER" prefHeight="0.0" prefWidth="61.0">
+         <children>
+
+      
+              <Button onAction="#onAddTransaction" text="Agregar" />
+            <HBox prefHeight="100.0" prefWidth="50.0" />
+              <Button onAction="#onClose" text="Cerrar" />
+         </children>
+      </HBox>
+    </VBox>
+</AnchorPane>
